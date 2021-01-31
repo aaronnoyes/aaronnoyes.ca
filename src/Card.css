@@ -17,13 +17,6 @@
     transform: scale(1.01);
 }
 
-.card__title {
-    font-size: 2em;
-    font-weight: 500;
-    max-width: 50%;
-    align-self: flex-start;
-}
-
 .card__content {
     max-width: 800px;
     display: flex;
