@@ -1,23 +1,17 @@
 .app {
   display: flex;
+  align-items: center;
   flex-flow: row wrap;
   padding-left: 100px;
   padding-right: 100px;
+}
+
+.bio {
+  justify-self: center;
 }
 
 @media only screen and (max-width: 600px) {
   .app {
     padding: 2px;
   }
-}
-
-.skills-list {
-  display: flex;
-  flex-flow: row wrap;
-  max-width: 400px;
-}
-
-.skills-list__img {
-  max-height: 70px;
-  margin: 10px 40px;
 }

@@ -3,13 +3,14 @@
     flex-flow: row nowrap;
     border-radius: 10px;
     height: 400px;
-    min-width: 400px;
+    min-width: 300px;
     background-color: white;
     background-size: cover;
     margin: 20px;
     flex-grow: 1;
     padding: 20px;
     align-items: center;
+    justify-content: center;
 }
 
 .card:hover {
@@ -30,5 +31,6 @@
     align-items: center;
     justify-content: center;
     line-height: 1.5em;
+    font-size: 1.2em;
     flex-grow: 1;
 }
