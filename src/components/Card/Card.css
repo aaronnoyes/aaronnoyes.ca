@@ -3,7 +3,6 @@
     flex-flow: column nowrap;
     border-radius: 10px;
     min-height: 400px;
-    min-width: 300px;
     background-color: white;
     background-size: cover;
     margin: 20px;
@@ -22,7 +21,13 @@
 }
 
 .card img {
-    max-height: 400px;
+    width: 300px;
+}
+
+@media screen and (max-width: 480px) {
+    .card img {
+        width: 100px;
+    }
 }
 
 .card:hover {

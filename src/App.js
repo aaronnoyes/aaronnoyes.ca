@@ -3,7 +3,7 @@ import Card from './components/Card/Card'
 import Header from './components/Header/Header'
 import Quad from './components/Quad/Quad'
 
-import me from './assets/me.jpeg'
+import me from './assets/me.png'
 
 import img_html from './assets/logos/html5.png'
 import img_css from './assets/logos/css.png'
