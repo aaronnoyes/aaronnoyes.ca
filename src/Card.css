@@ -1,6 +1,6 @@
 .card {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     border-radius: 10px;
     height: 400px;
     min-width: 400px;

@@ -14,10 +14,10 @@
 .skills-list {
   display: flex;
   flex-flow: row wrap;
-  max-width: 300px;
+  max-width: 400px;
 }
 
 .skills-list__img {
-  max-height: 50px;
-  margin: 10px;
+  max-height: 70px;
+  margin: 10px 40px;
 }
