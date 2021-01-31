@@ -6,11 +6,16 @@
         "a1 a2"
         "b1 b2";
     height: 440px;
-    min-width: 300px;
+    width: 440px;
     margin: 20px;
-    flex-grow: 1;
     grid-gap: 40px;
     padding: 0px;
+}
+
+@media screen and (max-height: 1000px) {
+    .quad {
+        flex-grow: 1;
+    }
 }
 
 .quad__corner {
@@ -19,6 +24,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.quad__corner:hover {
+    transform: scale(1.01);
 }
 
 .quad__corner__img {
