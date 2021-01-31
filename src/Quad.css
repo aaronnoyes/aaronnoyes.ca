@@ -31,7 +31,7 @@
 }
 
 .quad__corner__img {
-    height: 100px;
+    max-width: 30%;
 }
 
 .a1 {

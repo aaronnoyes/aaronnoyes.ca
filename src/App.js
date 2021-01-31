@@ -12,6 +12,12 @@ import img_nodejs from './logos/nodejs.png'
 import img_react from './logos/react.png'
 import img_nginx from './logos/nginx.png'
 import img_python from './logos/python.png'
+import img_aws from './logos/aws.png'
+import img_gcp from './logos/gcp.png'
+import img_cpp from './logos/cpp.png'
+import img_docker from './logos/docker.png'
+import img_mongo from './logos/mongo.png'
+import img_sql from './logos/sql.png'
 
 import img_nn from './nn.png'
 import img_iris from './iris.png'
@@ -34,7 +40,8 @@ function App() {
       </Card>
       <Quad a1={img_html} a2={img_css} b1={img_js} b2={img_react}/>
       <Quad a1={img_nodejs} a2={img_nginx} b1={img_js} b2={img_python}/>
-      <Quad a1={img_nodejs} a2={img_nginx} b1={img_js} b2={img_python}/>
+      <Quad a1={img_aws} a2={img_gcp} b1={img_docker} b2={img_cpp}/>
+      <Quad a1={img_mongo} a2={img_sql}/>
       <Card>
         <h1>Projects</h1>
       </Card>
