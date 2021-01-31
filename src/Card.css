@@ -1,29 +1,30 @@
 .card {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     border-radius: 10px;
-    height: 400px;
+    min-height: 400px;
     min-width: 300px;
     background-color: white;
     background-size: cover;
     margin: 20px;
     flex-grow: 1;
-    padding: 20px;
+    padding: 20px 50px;
     align-items: center;
     justify-content: center;
+}
+
+.card > h1 {
+    text-align: center;
+}
+
+.card > p {
+    line-height: 1.2em;
+}
+
+.card img {
+    max-height: 400px;
 }
 
 .card:hover {
     transform: scale(1.01);
-}
-
-.card__content {
-    max-width: 800px;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-    line-height: 1.5em;
-    font-size: 1.2em;
-    flex-grow: 1;
 }
