@@ -1,35 +1,48 @@
 .card {
-    display: flex;
-    flex-flow: column nowrap;
-    border-radius: 10px;
-    min-height: 400px;
-    background-color: white;
-    background-size: cover;
-    margin: 20px;
-    flex-grow: 1;
-    padding: 20px 50px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-flow: column nowrap;
+  border-radius: 10px;
+  min-height: 400px;
+  background-color: white;
+  background-size: cover;
+  opacity: 90%;
+  margin: 20px;
+  flex-grow: 1;
+  padding: 20px 50px;
+  align-items: center;
+  justify-content: center;
 }
 
 .card > h1 {
-    text-align: center;
+  text-align: center;
 }
 
 .card > p {
-    line-height: 1.2em;
+  line-height: 1.2em;
 }
 
 .card img {
-    width: 300px;
+  width: 300px;
 }
+
+/* ----------- */
+.photo {
+  background: url('../../assets/me.png');
+  background-size: cover;
+}
+
+.dim {
+  opacity: 100%;
+}
+/* ----------- */
 
 @media screen and (max-width: 480px) {
-    .card img {
-        width: 100px;
-    }
+  .card img {
+    width: 100px;
+  }
 }
 
-.card:hover {
-    transform: scale(1.01);
-}
+/* I'd remove this, unless the card is actionable.  */
+/* .card:hover {
+  transform: scale(1.01);
+} */

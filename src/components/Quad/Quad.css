@@ -1,50 +1,55 @@
 .quad {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-        "a1 a2"
-        "b1 b2";
-    height: 440px;
-    width: 440px;
-    margin: 20px;
-    grid-gap: 40px;
-    padding: 0px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'a1 a2'
+    'b1 b2';
+  /* For measurements I'd really recommend getting used to using rem everywhere, like so (play around with the numbers as you see fit): */
+  height: 25rem;
+  width: 25rem;
+  gap: 1.5rem;
+  margin: 1.5rem;
+  /* height: 440px;
+  width: 440px;
+  margin: 20px;
+  grid-gap: 40px; */
 }
 
 @media screen and (max-height: 1200px) {
-    .quad {
-        flex-grow: 1;
-    }
+  .quad {
+    flex-grow: 1;
+  }
 }
 
 .quad__corner {
-    background-color: white;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .quad__corner:hover {
-    transform: scale(1.01);
+  transform: scale(1.01);
 }
 
 .quad__corner__img {
-    max-width: 30%;
+  max-width: 30%;
 }
 
+/* These styles aren't doing anything, grid is already putting the items in this order because it's the order you put them in as props */
 .a1 {
-    grid-area: a1;
+  grid-area: a1;
 }
 
 .a2 {
-    grid-area: a2;
+  grid-area: a2;
 }
 
 .b1 {
-    grid-area: b1;
+  grid-area: b1;
 }
 .a1 {
-    grid-area: b2;
+  grid-area: b2;
 }

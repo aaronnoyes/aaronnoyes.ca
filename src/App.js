@@ -74,9 +74,9 @@ function App() {
       This quad setup is causing some of the weird layout issues. You have a flex container laying out groups of 4 items, but the last one only having 2 is causing the gap you see near the "Projects title card". Here is what I'd do (notice the array on line 22):
 
       <div>
-        {logos.map((logo) => {
+        {logos.map((logo, index) => {
           return (
-            <img alt={logo.name} src={`./assets/logos/${logo.file}`} />
+            <img alt={logo.name} src={`./assets/logos/${logo.file}` key={index} />
           );
         })} 
       </div>
