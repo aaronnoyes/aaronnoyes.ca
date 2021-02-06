@@ -32,14 +32,12 @@ const Container = styled.div`
         width: 300px;
     }
     
-    @media screen and (max-width: 480px) {
-        & img {
-            width: 100px;
-        }
-    }
-    
     &:hover {
         transform: scale(1.01);
+    }
+
+    @media screen and (max-width: 500px) {
+        min-width: 200px;
     }
 `;
 

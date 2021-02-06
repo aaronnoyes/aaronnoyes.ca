@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import Card from './components/Card'
 import Header from './components/Header'
-import Quad from './components/Quad'
-import './styles/App.css';
-import Project from './components/Project';
+import SkillImage from './components/SkillImage';
+
+import me from './assets/me.png'
 
 const logos = [
   { name: 'html5', file: 'html5.png' },
@@ -20,6 +20,12 @@ const logos = [
   { name: 'mongo', file: 'mongo.png' },
   { name: 'sql', file: 'sql.png' },
 ];
+
+const SkillList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+`;
 
 const Container = styled.div`
   display: flex;
@@ -46,37 +52,30 @@ function App() {
       <Card>
         <h1>Aaron Noyes</h1>
       </Card>
-      <Card image={me}/>
+      <Card image={me}></Card>
       <Card>
-        <p className="bio">
+        <p>
         I am a software developer with a BSc majoring in Computer Science specializing in Networks and Security at the University of Manitoba. Prior to the University of Manitoba attended the University of Alberta where I played football and studied computer science. My primary interests lie in software and network security, as well as web and mobile development. I have been programming as a hobby since 2010 and for my studies since 2015. Most of my school work was written in C/C++, Java, and Python. For personal interest I have also learned about web and iOS development by taking courses on Udemy, and doing self guided learnng in my free time.
         </p>
       </Card>
       <Card>
         <h1>Skills</h1>
       </Card>
-      <div className="skills">
-        <h2>Skills</h2>
-        <div className="skillsList">
+      <Card>
+        <SkillList>
           {logos.map((logo, index) => {
             return (
-              <div className="logo">
-                <img
-                  alt={logo.name}
-                  src={`./assets/logos/${logo.file}`}
-                  key={index}
-                />
-              </div>
+              <SkillImage logo={logo} index={index}></SkillImage>
             );
           })}
-        </div>
-      </div>
+        </SkillList>
+      </Card>
       <Card>
         <h1>Projects</h1>
       </Card>
       <Card>
         <h2>nn</h2>
-        <img src={img_nn}></img>
+        <img src='/assets/nn.png'></img>
         <p>
           nn is a simplistic neural network class built in python using NumPy. The purpose of this project was to analyze the 
           selection of hyper-parameters in network training and compare their performance on a training dataset.
@@ -102,7 +101,7 @@ function App() {
       </Card>
       <Card>
         <h2>Iris</h2>
-        <img src={img_iris}></img>
+        <img src='/assets/iris.png'></img>
         <p>
           A group project for school aimed to improve the user experience of registering for courses. My primary contribution was the search 
           engine and course registration system. Courses are listed clearly with a responsive search. An emphasis was placed on user interaction and page readability.
