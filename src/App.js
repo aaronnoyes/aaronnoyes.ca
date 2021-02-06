@@ -1,7 +1,7 @@
-import './App.css';
-import Card from './components/Card/Card'
-import Header from './components/Header/Header'
-import Quad from './components/Quad/Quad'
+import styled from 'styled-components'
+import Card from './components/Card'
+import Header from './components/Header'
+import Quad from './components/Quad'
 
 import me from './assets/me.png'
 
@@ -22,9 +22,27 @@ import img_sql from './assets/logos/sql.png'
 import img_nn from './assets/nn.png'
 import img_iris from './assets/iris.png'
 
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;;
+  flex-flow: row wrap;
+  padding-left: 100px;
+  padding-right: 100px;
+
+  @media only screen and (max-width: 1200px) {
+      padding: 2px;
+  }
+`;
+
+const Link = styled.a`
+  color: rgb(107, 196, 255);
+  text-decoration: none;
+`;
+
 function App() {
   return (
-    <div className="app">
+    <Container>
       <Header></Header>
       <Card>
         <h1>Aaron Noyes</h1>
@@ -55,8 +73,8 @@ function App() {
           One of the other focuses was to explain some of the basic math behind training a fully-connected neural network.
         </p>
         <p>
-          The <a href="https://github.com/aaronnoyes/neural-network/blob/master/nn.pdf" class="external-link" target="_blank">paper</a> and 
-          <a href="https://github.com/aaronnoyes/neural-network" class="external-link" target="_blank"> code</a> can be found on my github.
+          The <Link href="https://github.com/aaronnoyes/neural-network/blob/master/nn.pdf" target="_blank">paper</Link> and 
+          <Link href="https://github.com/aaronnoyes/neural-network" class="external-link" target="_blank"> code</Link> can be found on my github.
         </p>
       </Card>
       <Card>
@@ -69,7 +87,7 @@ function App() {
         <p class="project-description">
           A handful of dynamic reconfiguration commands exist through the TLS channel which allow for the key and other parameters to be changed.
         </p>
-        <p class="project-description">The <a href="https://github.com/aaronnoyes/seedVPN/blob/master/paper.pdf" class="external-link" target="_blank">paper and code can be found here.</a></p>
+        <p class="project-description">The <Link href="https://github.com/aaronnoyes/seedVPN/blob/master/paper.pdf" target="_blank">paper and code can be found here.</Link></p>
       </Card>
       <Card>
         <h2>Iris</h2>
@@ -79,11 +97,11 @@ function App() {
           engine and course registration system. Courses are listed clearly with a responsive search. An emphasis was placed on user interaction and page readability.
         </p>
         <p>
-          The site can be found at <a href="https://aaronnoyes.github.io/aurora2/home.html?" class="external-link" target="_blank">aaronnoyes.github.io/aurora2</a>. 
+          The site can be found at <Link href="https://aaronnoyes.github.io/aurora2/home.html?" target="_blank">aaronnoyes.github.io/aurora2</Link>. 
           My contribution can be found by selecting "Course Registration" from the menu under the banner.
         </p>
       </Card>
-    </div>
+    </Container>
   );
 }
 
