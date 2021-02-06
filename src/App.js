@@ -1,26 +1,31 @@
 import styled from 'styled-components'
 import Card from './components/Card'
 import Header from './components/Header'
-import Quad from './components/Quad'
+import SkillImage from './components/SkillImage';
 
 import me from './assets/me.png'
 
-import img_html from './assets/logos/html5.png'
-import img_css from './assets/logos/css.png'
-import img_js from './assets/logos/js.png'
-import img_nodejs from './assets/logos/nodejs.png'
-import img_react from './assets/logos/react.png'
-import img_nginx from './assets/logos/nginx.png'
-import img_python from './assets/logos/python.png'
-import img_aws from './assets/logos/aws.png'
-import img_gcp from './assets/logos/gcp.png'
-import img_cpp from './assets/logos/cpp.png'
-import img_docker from './assets/logos/docker.png'
-import img_mongo from './assets/logos/mongo.png'
-import img_sql from './assets/logos/sql.png'
+const logos = [
+  { name: 'html5', file: 'html5.png' },
+  { name: 'css', file: 'css.png' },
+  { name: 'js', file: 'js.png' },
+  { name: 'nodejs', file: 'nodejs.png' },
+  { name: 'react', file: 'react.png' },
+  { name: 'nginx', file: 'nginx.png' },
+  { name: 'python', file: 'python.png' },
+  { name: 'aws', file: 'aws.png' },
+  { name: 'gcp', file: 'gcp.png' },
+  { name: 'cpp', file: 'cpp.png' },
+  { name: 'docker', file: 'docker.png' },
+  { name: 'mongo', file: 'mongo.png' },
+  { name: 'sql', file: 'sql.png' },
+];
 
-import img_nn from './assets/nn.png'
-import img_iris from './assets/iris.png'
+const SkillList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+`;
 
 const Container = styled.div`
   display: flex;
@@ -47,25 +52,30 @@ function App() {
       <Card>
         <h1>Aaron Noyes</h1>
       </Card>
-      <Card image={me}/>
+      <Card image={me}></Card>
       <Card>
-        <p className="bio">
+        <p>
         I am a software developer with a BSc majoring in Computer Science specializing in Networks and Security at the University of Manitoba. Prior to the University of Manitoba attended the University of Alberta where I played football and studied computer science. My primary interests lie in software and network security, as well as web and mobile development. I have been programming as a hobby since 2010 and for my studies since 2015. Most of my school work was written in C/C++, Java, and Python. For personal interest I have also learned about web and iOS development by taking courses on Udemy, and doing self guided learnng in my free time.
         </p>
       </Card>
       <Card>
         <h1>Skills</h1>
       </Card>
-      <Quad a1={img_html} a2={img_css} b1={img_js} b2={img_react}/>
-      <Quad a1={img_nodejs} a2={img_nginx} b1={img_js} b2={img_python}/>
-      <Quad a1={img_aws} a2={img_gcp} b1={img_docker} b2={img_cpp}/>
-      <Quad a1={img_mongo} a2={img_sql}/>
+      <Card>
+        <SkillList>
+          {logos.map((logo, index) => {
+            return (
+              <SkillImage logo={logo} index={index}></SkillImage>
+            );
+          })}
+        </SkillList>
+      </Card>
       <Card>
         <h1>Projects</h1>
       </Card>
       <Card>
         <h2>nn</h2>
-        <img src={img_nn}></img>
+        <img src='/assets/nn.png'></img>
         <p>
           nn is a simplistic neural network class built in python using NumPy. The purpose of this project was to analyze the 
           selection of hyper-parameters in network training and compare their performance on a training dataset.
@@ -91,7 +101,7 @@ function App() {
       </Card>
       <Card>
         <h2>Iris</h2>
-        <img src={img_iris}></img>
+        <img src='/assets/iris.png'></img>
         <p>
           A group project for school aimed to improve the user experience of registering for courses. My primary contribution was the search 
           engine and course registration system. Courses are listed clearly with a responsive search. An emphasis was placed on user interaction and page readability.
