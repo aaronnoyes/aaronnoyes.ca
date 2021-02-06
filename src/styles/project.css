@@ -1,0 +1,27 @@
+.project {
+  align-items: center;
+  background-color: white;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.project img {
+  width: 100%;
+  max-width: 25rem;
+}
+
+.project a {
+  text-decoration: none;
+  color: blue;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+.project a:visited {
+  color: blue;
+}
