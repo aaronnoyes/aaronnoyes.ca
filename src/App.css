@@ -12,7 +12,12 @@
 }
 
 .external-link {
+  color: rgb(107, 196, 255);
   text-decoration: none;
+}
+
+a:visited {
+  
 }
 
 @media only screen and (max-width: 1200px) {
