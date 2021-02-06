@@ -2,25 +2,24 @@ import styled from 'styled-components'
 import Card from './components/Card'
 import Header from './components/Header'
 import Quad from './components/Quad'
+import './styles/App.css';
+import Project from './components/Project';
 
-import me from './assets/me.png'
-
-import img_html from './assets/logos/html5.png'
-import img_css from './assets/logos/css.png'
-import img_js from './assets/logos/js.png'
-import img_nodejs from './assets/logos/nodejs.png'
-import img_react from './assets/logos/react.png'
-import img_nginx from './assets/logos/nginx.png'
-import img_python from './assets/logos/python.png'
-import img_aws from './assets/logos/aws.png'
-import img_gcp from './assets/logos/gcp.png'
-import img_cpp from './assets/logos/cpp.png'
-import img_docker from './assets/logos/docker.png'
-import img_mongo from './assets/logos/mongo.png'
-import img_sql from './assets/logos/sql.png'
-
-import img_nn from './assets/nn.png'
-import img_iris from './assets/iris.png'
+const logos = [
+  { name: 'html5', file: 'html5.png' },
+  { name: 'css', file: 'css.png' },
+  { name: 'js', file: 'js.png' },
+  { name: 'nodejs', file: 'nodejs.png' },
+  { name: 'react', file: 'react.png' },
+  { name: 'nginx', file: 'nginx.png' },
+  { name: 'python', file: 'python.png' },
+  { name: 'aws', file: 'aws.png' },
+  { name: 'gcp', file: 'gcp.png' },
+  { name: 'cpp', file: 'cpp.png' },
+  { name: 'docker', file: 'docker.png' },
+  { name: 'mongo', file: 'mongo.png' },
+  { name: 'sql', file: 'sql.png' },
+];
 
 const Container = styled.div`
   display: flex;
@@ -56,10 +55,22 @@ function App() {
       <Card>
         <h1>Skills</h1>
       </Card>
-      <Quad a1={img_html} a2={img_css} b1={img_js} b2={img_react}/>
-      <Quad a1={img_nodejs} a2={img_nginx} b1={img_js} b2={img_python}/>
-      <Quad a1={img_aws} a2={img_gcp} b1={img_docker} b2={img_cpp}/>
-      <Quad a1={img_mongo} a2={img_sql}/>
+      <div className="skills">
+        <h2>Skills</h2>
+        <div className="skillsList">
+          {logos.map((logo, index) => {
+            return (
+              <div className="logo">
+                <img
+                  alt={logo.name}
+                  src={`./assets/logos/${logo.file}`}
+                  key={index}
+                />
+              </div>
+            );
+          })}
+        </div>
+      </div>
       <Card>
         <h1>Projects</h1>
       </Card>
