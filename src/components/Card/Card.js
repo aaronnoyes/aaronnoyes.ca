@@ -1,11 +1,7 @@
 import './Card.css'
 
 function Card(props) {
-    const inline_style = {opacity: "90%"}
-
-    if(props.dim === true) {
-        inline_style.opacity = "100%"
-    }
+    const inline_style = {}
 
     if(props.image) {
         inline_style.backgroundImage = `url(${props.image})`

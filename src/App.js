@@ -26,8 +26,8 @@ function App() {
   return (
     <div className="app">
       <Header></Header>
-      <Card dim={true}>
-        <h1>About Me</h1>
+      <Card>
+        <h1>Aaron Noyes</h1>
       </Card>
       <Card image={me}/>
       <Card>
@@ -35,7 +35,7 @@ function App() {
         I am a software developer with a BSc majoring in Computer Science specializing in Networks and Security at the University of Manitoba. Prior to the University of Manitoba attended the University of Alberta where I played football and studied computer science. My primary interests lie in software and network security, as well as web and mobile development. I have been programming as a hobby since 2010 and for my studies since 2015. Most of my school work was written in C/C++, Java, and Python. For personal interest I have also learned about web and iOS development by taking courses on Udemy, and doing self guided learnng in my free time.
         </p>
       </Card>
-      <Card dim={true}>
+      <Card>
         <h1>Skills</h1>
       </Card>
       <Quad a1={img_html} a2={img_css} b1={img_js} b2={img_react}/>
@@ -46,7 +46,7 @@ function App() {
         <h1>Projects</h1>
       </Card>
       <Card>
-        <h1>nn</h1>
+        <h2>nn</h2>
         <img src={img_nn}></img>
         <p>
           nn is a simplistic neural network class built in python using NumPy. The purpose of this project was to analyze the 
@@ -60,7 +60,7 @@ function App() {
         </p>
       </Card>
       <Card>
-        <h1>seedVPN</h1>
+        <h2>seedVPN</h2>
         <p>
           This project implements a simple VPN using the Linux tun/tap driver created as a final project for a security course. 
           A UDP tunnel is used to relay IP packets through a virtual TUN device. Each message is encrypted using AES-256 and secured 
@@ -72,7 +72,7 @@ function App() {
         <p class="project-description">The <a href="https://github.com/aaronnoyes/seedVPN/blob/master/paper.pdf" class="external-link" target="_blank">paper and code can be found here.</a></p>
       </Card>
       <Card>
-        <h1>Iris</h1>
+        <h2>Iris</h2>
         <img src={img_iris}></img>
         <p>
           A group project for school aimed to improve the user experience of registering for courses. My primary contribution was the search 

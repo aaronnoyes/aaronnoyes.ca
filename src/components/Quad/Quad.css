@@ -19,11 +19,14 @@
 }
 
 .quad__corner {
-    background-color: white;
+    background-color: black;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgba(51, 48, 51, 0.397);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .quad__corner:hover {

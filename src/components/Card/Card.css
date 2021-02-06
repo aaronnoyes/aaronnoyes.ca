@@ -3,21 +3,26 @@
     flex-flow: column nowrap;
     border-radius: 10px;
     min-height: 400px;
-    background-color: white;
+    min-width: 400px;
+    color: white;
     background-size: cover;
     margin: 20px;
     flex-grow: 1;
     padding: 20px 50px;
     align-items: center;
     justify-content: center;
+    background-color: rgba(51, 48, 51, 0.397);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .card > h1 {
     text-align: center;
+    font-size: 5em;
 }
 
 .card > p {
-    line-height: 1.2em;
+    line-height: 1.5em;
 }
 
 .card img {
