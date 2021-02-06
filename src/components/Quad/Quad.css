@@ -1,14 +1,9 @@
 .quad {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-        "a1 a2"
-        "b1 b2";
-    height: 440px;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
     width: 440px;
     margin: 20px;
-    grid-gap: 40px;
     padding: 0px;
 }
 
@@ -27,6 +22,9 @@
     background-color: rgba(51, 48, 51, 0.397);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    height: 200px;
+    width: 40%;
+    margin: 20px;
 }
 
 .quad__corner:hover {
