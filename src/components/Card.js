@@ -15,6 +15,7 @@ const Container = styled.div`
     justify-content: center;
     background: ${props => props.bg ? `url(${props.bg})` : 'none'};
     background-color: rgba(51, 48, 51, 0.397);
+    background-size: fill;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 

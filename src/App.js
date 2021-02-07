@@ -3,7 +3,7 @@ import Card from './components/Card'
 import Header from './components/Header'
 import SkillImage from './components/SkillImage';
 
-import me from './assets/me.png'
+import me from './assets/me-old.jpeg'
 
 const logos = [
   { name: 'html5', file: 'html5.png' },
@@ -40,6 +40,20 @@ const Container = styled.div`
   }
 `;
 
+const Profile = styled.img`
+  border-radius: 10px;
+  height: 440px;
+  margin-right: 20px;
+  width: auto;
+
+  @media screen and (max-width: 500px) {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-right: 0px;
+  }
+`;
+
 const Link = styled.a`
   color: rgb(107, 196, 255);
   text-decoration: none;
@@ -52,7 +66,8 @@ function App() {
       <Card>
         <h1>Aaron Noyes</h1>
       </Card>
-      <Card image={me}></Card>
+      {/* <Card image={me}></Card> */}
+      <Profile src={me}></Profile>
       <Card>
         <p>
         I am a software developer with a BSc majoring in Computer Science specializing in Networks and Security at the University of Manitoba. Prior to the University of Manitoba attended the University of Alberta where I played football and studied computer science. My primary interests lie in software and network security, as well as web and mobile development. I have been programming as a hobby since 2010 and for my studies since 2015. Most of my school work was written in C/C++, Java, and Python. For personal interest I have also learned about web and iOS development by taking courses on Udemy, and doing self guided learnng in my free time.
