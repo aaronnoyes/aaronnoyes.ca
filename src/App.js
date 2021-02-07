@@ -49,7 +49,6 @@ const Profile = styled.img`
   @media screen and (max-width: 500px) {
     width: 90%;
     height: auto;
-    margin: auto;
     margin-right: 0px;
   }
 `;
